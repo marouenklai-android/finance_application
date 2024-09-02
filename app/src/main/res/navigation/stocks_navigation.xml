@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/StockListFragment">
+    <fragment
+        android:id="@+id/StockListFragment"
+        android:name="com.example.financeapplication.app.fragments.StockListFragment"
+        android:label="Stock Market List"
+        tools:layout="@layout/fragment_stock_list">
+
+        <action
+            android:id="@+id/action_mobile_navigation_to_stockDetailFragment"
+            app:destination="@id/stockDetailFragment"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/stockDetailFragment"
+        android:name="com.example.financeapplication.app.fragments.StockItemDetailFragment"
+        android:label="Stock Details"
+        tools:layout="@layout/fragment_stock_item_detail" >
+        <action
+            android:id="@+id/action_addNoteFragment_to_StockListFragment"
+            app:destination="@id/StockListFragment" />
+
+
+    </fragment>
+
+</navigation>
